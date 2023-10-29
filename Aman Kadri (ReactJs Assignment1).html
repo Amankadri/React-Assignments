@@ -1,0 +1,132 @@
+<!-- Module-3: ReactJs
+Q1. What is React Js? 
+A1. React is a JavaScript library created by Facebook  React is a User Interface (UI) library. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js. 
+ 
+Q2. What is NPM in React Js? 
+A1. npm is an abbreviation used for the Node Package Manager. It is a package manager for JavaScript. It is the default package manager that comes with NodeJS when you install it. It consists of a command-line interface and an online database of public packages and private packages that are paid which is called the npm Registry. 
+Q3. What is Role of Node Js in react Js? 
+A3. NodeJS is a framework of JavaScript which is mainly used for working with the backend of our application or building the backend using 
+JavaScript, whereas ReactJS is a JavaScript front-end library. It is mainly used for building the user interface or the frontend of our application. 
+Q4. What is CLI command In React Js? 
+A4. CLI is a command line program that accepts text input to execute operating system functions. 
+Q5. What is Components in React Js? 
+A4. Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions but work in isolation and return HTML. Components come in two types, Class components and Function components. 
+Q5. What is Header and Content Components in React Js? 
+A5. A header component defines a reusable custom header that can be sent in an API request or returned in an API response. 
+ 
+ 
+Q6. How to install React Js on Windows, Linux Operating System? 
+Installation Reactjs on Windows: 
+Step 1: Install Node.js installer for windows. Click on this link. Here install the LTS version (the one present on the left). Once downloaded open NodeJS without disturbing other settings, click on the Next button until it’s completely installed. 
+ Step 2: Open command prompt to check whether it is completely installed or not type the command –>  node-v 
+ 
+Node Version is v14.15.3 
+If the installation went well, it would give you the version you have installed   
+Step 3: Now in the terminal run the below command:  
+npm install -g create-react-app    
+run the command   create-react-app –
+version  4.0.3 
+If everything went well it will give you the installed version of react app 
+Step 4: Now Create a new folder where you want to make your react app using the below command: 
+Move inside the same folder using the below command: cd newfolder (your folder name) 
+ 
+Step 5: Now inside this folder run the command –> create-react-app YOUR_APP_NAME 
+ 
+It will take some time to install the required dependencies 
+NOTE: Due to npm naming restrictions, names can no longer contain capital letters, thus type your app’s name in lowercase. 
+ 
+Step 6: Now open the IDE of your choice for eg.  Visual studio code and open the folder where you have installed the react app newfolder (in the above example) inside the folder you will see your app’s name rapp (In our example). Use the terminal and move inside your app name folder. 
+Use command cd app (your app name) 
+ 
+Step 7: To start your app run the below command :   npm start   
+ 
+Once you run the above command a new tab will open in your browser showing React logo as shown below:  Congratulation you have successfully installed the react-app 
+ 
+ Q7. How to Install NPM and How to check version of NPM? 
+1.	Open your command-line interface (such as Terminal Command Prompt). 
+2.	Writer the given command and press Enter: npm –version. 
+3.	The command will display the version number of NPM installed on your system. 
+ 
+Q8. How to check version of React Js? 
+•	Using package.json file 
+•	Using command line 
+•	
+Using package.json file: 
+The package.json contains metadata about our project. It is created by default when we create our React project. 
+The package.json file contains a lot of information in the name/value pairs in JSON format. We can easily check our React version under the list of dependencies as shown in the image given below. 
+ 
+ 
+Using the command line: 
+We can easily check the React version by using the command mentioned below on our command line. npm view react version 
+The output demonstrating the use of the above command on the command line is mentioned below
+
+ 
+Q9. How to change in components of React Js? 
+A9. React components automatically re-render whenever there is a change in their state or props. A simple update of the state, from anywhere in the code, causes all the User Interface (UI) elements to be re-rendered automatically. However, there may be cases where the render() method depends on some other data. 
+  -->
+
+<!-- Q10 How to Create a List View in React Js? -->
+<!-- A10 Here's a basic example of how you can create a simple list view in Reactjs:
+				import './App.css';
+				import React from 'react';
+
+				const items = [
+				  { id: 1, name: "Umar" },
+				  { id: 2, name: "Aman" },
+				  { id: 3, name: "Aamena" }
+				];
+
+
+				function Listview({items}) {
+
+				  return (
+				    <ul>
+				        {items.map(item => (
+				            <li>{item.name}</li>
+				        ))}
+				    </ul>
+				  )
+				}
+
+				function App() {
+
+				  return (
+				    <div className="App">
+				      <h1>List View</h1>
+				      <Listview items={items}/>
+				     
+				    </div>
+				  );
+				}
+
+				export default App; -->
+
+
+<!-- Q11 Create Increment decrement state change by button click? -->
+<!-- A11 Here's the code for crating a basic counter on button click.
+
+				function App() {
+
+			    const [count, setCount] = useState(0);
+			  
+			    const increment = () => {
+			      setCount(count + 1);
+			    };
+			  
+			    const decrement = () => {
+			      setCount(count - 1);
+			    };  
+
+
+
+			  return (
+			    <div className="App">
+
+			      <div>
+			      <h2>Counter: {count}</h2>
+			      <button onClick={increment}>Increment</button>
+			      <button onClick={decrement}>Decrement</button>
+			      </div>
+
+			    </div>
+			 	);
